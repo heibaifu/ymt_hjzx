@@ -1,0 +1,492 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+<title>任务管理-医生列表-高级检索弹窗</title>
+<link href="res/css/css.css" type="text/css" rel="stylesheet" />
+<script src="res/js/jquery.js"></script>
+<script src="res/js/index.js"></script>
+</head>
+
+<body onload="init()" onresize="init()">
+	<div class="page_top">
+    	<div class="top_title">
+        	<div class="left clearfix">
+            	<h4 class="left">医脉通呼叫中心管理系统</h4>
+                <p class="right">今天是2014年6月11日  星期三  16:10</p>
+            </div>
+            <div class="right">
+            	张尔洛，欢迎您！<a href="">退出</a>
+            </div>
+        </div>
+        <div class="top_nav">
+        	<ul class="clearfix">
+            	<li>
+                	<a href="" class="cur">任务管理</a>
+                </li>
+                <li>
+                	<a href="">呼叫记录</a>
+                </li>
+                <li>
+                	<a href="">医生管理</a>
+                </li>
+                <li>
+                	<a href="">后台管理</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+   	<div class="page_cont">
+    	<div class="cont_body">
+            <div class="l_menu">
+                <ul>
+                    <li>
+                        <a href="" class="cur">医生列表</a>
+                    </li>
+                    <li>
+                        <a href="">预约呼叫(<span class="red">20</span>)</a>
+                    </li>
+                    <li>
+                        <a href="">呼叫记录</a>
+                    </li>
+                    <li>
+                        <a href="">呼叫统计</a>
+                    </li>
+                    <li>
+                        <a href="">任务设置</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="r_box" id="bg">
+            	<div class="r_wrapper">
+                    <div class="top_site clearfix">
+                        <div class="here">
+                            您的位置：<a href="">任务管理</a>>医生列表
+                        </div>
+                        <div class="search_box clearfix">
+                        	<div class="search_input">
+                                <label>简单检索：</label>
+                                <input type="text" class="txt" placeholder="医生姓名或手机号" />
+                            </div>
+                            <div class="search_select">
+                                <label>选项：</label>
+                                <select>
+                                    <option>=请选择=</option>
+                                    <option>已拨打</option>
+                                    <option>未拨打</option>
+                                    <option>手机重复</option>
+                                    <option>邮箱重复</option>
+                                    <option>我拨打过的</option>
+                                    <option>最近一次无人接听</option>
+                                    <option>最近一次关机</option>
+                                    <option>最近一次停机</option>
+                                    <option>最近一次暂停服务</option>
+                                    <option>最近一次未接听直接挂断</option>
+                                    <option>最近一次接通后了解来意后挂断</option>
+                                </select>
+                            </div>
+                            <div class="search_btn">
+                                <input type="button" class="btn" value="开始检索" />
+                                <input type="button" class="btn" value="高级检索" />
+                                <input type="button" class="btn" value="新增医生" />
+                                <input type="button" class="btn" value="导入医生" />
+                                <input type="button" class="btn" value="导出列表" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cont_box">
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <th width="5%"></th>
+                                    <th width="6%">姓名</th>
+                                    <th width="6%">省份</th>
+                                    <th width="6%">城市</th>
+                                    <th width="6%">县/区</th>
+                                    <th width="22%">医院</th>
+                                    <th width="8%">科室</th>
+                                    <th width="6%">重复</th>
+                                    <th width="7%">目标达成</th>
+                                    <th width="8%">距上次拨打</th>
+                                    <th width="6%">通话结束</th>
+                                    <th width="8%">坐席号</th>
+                                    <th width="6%">拨打</th>
+                                </tr>
+                                <tr class="red">
+                                    <td><input type="checkbox" /></td>
+                                    <td><a href="" class="red">张尔洛</a></td>
+                                    <td>北京市</td>
+                                    <td>北京市</td>
+                                    <td>海淀区</td>
+                                    <td title="北京大学附属第六医院">北京大学附属第六医院</td>
+                                    <td>精神内科</td>
+                                    <td>无</td>
+                                    <td>否</td>
+                                    <td>72h</td>
+                                    <td>停机</td>
+                                    <td>01001</td>
+                                    <td><input type="button" class="btn call_btn" /></td>
+                                </tr>
+                                <tr class="even red">
+                                    <td><input type="checkbox" /></td>
+                                    <td><a href="" class="red">张尔洛</a></td>
+                                    <td>北京市</td>
+                                    <td>北京市</td>
+                                    <td>海淀区</td>
+                                    <td title="北京大学附属第六医院">北京大学附属第六医院</td>
+                                    <td>精神内科</td>
+                                    <td>无</td>
+                                    <td>否</td>
+                                    <td>72h</td>
+                                    <td>停机</td>
+                                    <td>01001</td>
+                                    <td><input type="button" class="btn call_btn" /></td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox" /></td>
+                                    <td><a href="">张尔洛</a></td>
+                                    <td>北京市</td>
+                                    <td>北京市</td>
+                                    <td>海淀区</td>
+                                    <td title="北京大学附属第六医院">北京大学附属第六医院</td>
+                                    <td>精神内科</td>
+                                    <td>无</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr class="even">
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr class="even">
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="flip">
+                    	<div class="left">任务数量<span>111</span></div>
+                        <div class="right">
+                        	<ul class="clearfix">
+                            	<li>
+                                	<a href=""><</a>  
+                                </li>
+                               	<li>
+                                	<a href="">1</a>
+                                </li>
+                                <li>
+                                	<a href="">2</a>
+                                </li>
+                                <li>
+                                	<a href="" class="cur">3</a>
+                                </li>
+                                <li>
+                                	<a href="">4</a>
+                                </li>
+                                <li>
+                                	<a href="">5</a>
+                                </li>
+                                <li>
+                                	<a href="">></a>
+                                </li>
+                            </ul>
+                            共5页<input type="text" /><a href="">跳转</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="page_pop advanced_search">
+    	<div class="pop_tit">高级检索</div>
+        <div class="pop_cont">
+        	<div class="search_form">
+            	<div class="input_line clearfix">
+                	<div class="input_one left">
+                        <label>医脉通ID：</label>
+                        <input type="text" class="txt" />
+                    </div>
+                    <div class="input_one right">
+                        <label>医生姓名：</label>
+                        <input type="text" class="txt" />
+                    </div>
+                </div>
+                <div class="input_line clearfix">
+                	<div class="input_one left">
+                        <label>省份城市：</label>
+                        <select class="mr_2">
+                            <option>省</option>
+                        </select>
+                        <select class="mr_2">
+                            <option>市</option>
+                        </select>
+                        <select>
+                            <option>区</option>
+                        </select>
+                    </div>
+                    <div class="input_one right">
+                        <label>医院：</label>
+                        <div class="input_wrapper" id="input">
+                            <input class="txt newinput" type="text" value="=请选择=" onblur="if(!value){value=defaultValue; $('.input_div').hide();}" onfocus="if(value==defaultValue){value=''; $('.input_div').show();}">
+                            <div class="input_div" style="display:none;">
+                                <span class="soption active" data-val="1">积水潭医院</span>  
+                                <span class="soption" data-val="2">回龙观医院</span>  
+                                <span class="soption" data-val="3">北京京北医院</span>  
+                                <span class="soption" data-val="4">住院部</span>  
+                                <span class="soption" data-val="5">05</span>  
+                                <span class="soption" data-val="6">06</span>  
+                                <span class="soption" data-val="10">101</span>  
+                                <span class="soption" data-val="20">102</span>  
+                                <span class="soption" data-val="30">103</span>  
+                                <span class="soption" data-val="40">104</span>  
+                                <span class="soption" data-val="50">105</span>  
+                                <span class="soption" data-val="60">106</span>
+                            </div>
+                            <input class="savedata" type="hidden" value=''>
+                            <script>
+                                function inputSelect(div_id){  
+                                    this.input_id=$("#"+div_id+' .newinput');  
+                                    this.input_id.focus(function(){  
+                                        $("#"+div_id+' .input_div').show();  
+                                    });  
+                                    this.input_id.keyup(function(){  
+                                        var st = $(this).val().trim();  
+                                        if (st == '') {  
+                                            $("span",$("#"+div_id+' .input_div')).show();  
+                                            var selval=0;  
+                                            $(".savedata",$("#"+div_id)).val(selval);  
+                                            return false;  
+                                        }  
+                                        var L = $("span",$("#"+div_id+' .input_div')).size();  
+                                        for (var i = 0; i < L; i ++){  
+                                            var elem = $("span",$("#"+div_id+' .input_div')).eq(i);
+                                            var html = $("span",$("#"+div_id+' .input_div')).eq(i).html();  
+                                            if (html.match(st)) {  
+                                                elem.show();  
+                                            } else {  
+                                                elem.hide();  
+                                            }  
+                                        }  
+                                        var selval = -1;  
+                                        if($("span:visible",$("#"+div_id+' .input_div')).length==1 || $("span:visible",$("#"+div_id+' .input_div')).eq(0).html()==st){  
+                                            selval= $("span:visible",$("#"+div_id+' .input_div')).eq(0).attr('data-val');  
+                                        } else {  
+                                            selval = st;//如果没有对应的，input在这里操作值  
+                                        }  
+                                        $(".savedata",$("#"+div_id)).val(selval);  
+                                        $("#"+div_id+' .input_div').show();  
+                                    }); 
+                                    $("span", $("#"+div_id+' .input_div')).mousedown(function(){
+                                        $('.input_div').hide();
+                                        $(".input_div span").removeClass("active");
+                                        $(this).addClass("active");
+                                        //console.log($("span",$("#"+div_id+' .input_div')));
+                                        var val = $(this).data('val');
+                                        $("#"+div_id+' .newinput').val($(this).html());  
+                                        $(".savedata",$("#"+div_id)).val(val);  
+                                    }) 
+                                }  
+                                new inputSelect("input");  
+                            </script>
+                        </div>
+                    </div>
+                </div>
+                <div class="input_line clearfix">
+                	<div class="input_one left">
+                        <label>科室：</label>
+                        <input type="text" class="txt" />
+                    </div>
+                    <div class="input_one right">
+                        <label>职称：</label>
+                        <select class="wid_100">
+                        	<option>=请选择=</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="input_line clearfix">
+                	<div class="input_one left">
+                        <label>手机：</label>
+                        <input type="text" class="txt" />
+                    </div>
+                    <div class="input_one right">
+                        <label>邮箱：</label>
+                        <input type="text" class="txt" />
+                    </div>
+                </div>
+                <div class="input_line clearfix">
+                	<div class="input_one left">
+                        <label>科室电话：</label>
+                        <input type="text" class="txt" />
+                    </div>
+                    <div class="input_one right">
+                        <label>医生认证：</label>
+                        <select class="wid_100">
+                        	<option>=请选择=</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="input_line clearfix">
+                	<div class="input_one wid_100">
+                        <label>目标选项：</label>   
+                        <ul class="clearfix">
+                            <li>
+                                <input type="checkbox" />备注一
+                            </li>
+                            <li>
+                                <input type="checkbox" />备注二
+                            </li>
+                            <li>
+                                <input type="checkbox" />备注三
+                            </li>
+                            <li>
+                                <input type="checkbox" />备注四
+                            </li>
+                            <li>
+                                <input type="checkbox" />备注五
+                            </li>
+                            <li>
+                                <input type="checkbox" />备注六
+                            </li>
+                            <li>
+                                <input type="checkbox" />备注七
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="input_line clearfix">
+                	<div class="input_one left">
+                        <label>发送短信：</label>   
+                        <ul class="clearfix">
+                            <li>
+                                <input type="radio" />无
+                            </li>
+                            <li>
+                                <input type="radio" />有
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="input_one right">
+                        <label>发送邮件：</label>   
+                        <ul class="clearfix">
+                            <li>
+                                <input type="radio" />无
+                            </li>
+                            <li>
+                                <input type="radio" />有
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="input_line clearfix">
+                	<div class="input_one left">
+                        <label>目标达成：</label>   
+                        <ul class="clearfix">
+                            <li>
+                                <input type="radio" />否
+                            </li>
+                            <li>
+                                <input type="radio" />是
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="input_one right">
+                        <label>目标达成日期：</label>  
+                        <div class="two_text clearfix"> 
+                            <input type="text" class="txt left" />
+                            <span>--</span>
+                            <input type="text" class="txt right" />
+                        </div>
+                    </div>
+                </div>
+                <div class="input_line clearfix">
+                	<div class="input_one left">
+                        <label>呼叫次数：</label>   
+                        <input type="text" class="txt" />
+                    </div>
+                    <div class="input_one right">
+                        <label>呼叫日期：</label>  
+                        <div class="two_text clearfix"> 
+                            <input type="text" class="txt left" />
+                            <span>--</span>
+                            <input type="text" class="txt right" />
+                        </div>
+                    </div>
+                </div>
+                <div class="input_line clearfix">
+                	<div class="input_one left">
+                        <label>坐席号：</label>
+                        <select class="wid_100">
+                        	<option>=请选择=</option>
+                        </select>              
+                    </div>
+                    <div class="input_one right">
+                        <label>坐席号：</label>
+                        <input type="text" class="txt" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="btn_box">
+        	<input type="button" class="btn btn_import" value="开始检索" />
+        	<input type="button" class="btn btn_close" value="取消检索" />
+        </div>
+    </div>
+</body>
+</html>

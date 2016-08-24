@@ -1,0 +1,259 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{ font:12px/24px "Microsoft YaHei","微软雅黑"; color:#333; background-color:#277ac1; word-wrap:break-word; min-width:1024px;}
+*{ margin:0; padding:0;}
+ul,ol,li{ list-style:none outside;}
+a{ color:#333; text-decoration:none;}
+a:hover{ text-decoration:none;}
+.left{ float:left;}
+.right{ float:right;}
+.center{ text-align:center;}
+.tx_l{ text-align:left;}
+.tx_r{ text-align:right;}
+.tx_2{ text-indent:2em;}
+img{ border:medium none; vertical-align:middle;}
+textarea{ resize:none; vertical-align:middle;}
+input,button,select,textarea{ border:medium none; background:none; outline:none; font:1em/normal "Microsoft YaHei","微软雅黑";}
+.btn{ cursor:pointer;}
+.clearfix:after{ content:"."; display:block; clear:both; height:0; line-height:0; font-size:0; visibility:hidden;}
+
+.red{ color:#ff0000!important;}
+.blue{ color:#0030ff!important;}
+.wid_100{ width:100%!important;}
+.pl_0{ padding-left:0!important; min-width:1004px;}
+
+/*登录*/
+.login_bg{ background:url(../images/login_bd.jpg) no-repeat center top #f7f9fa; background-size:cover;}
+.login_box{ width:375px; height:610px; padding:0 60px; background:url(../images/login_bg.png) no-repeat; position:absolute; top:50%; left:50%; margin-top:-305px; margin-left:-247.5px;}
+.login_tit{ font-size:32px; line-height:42px; color:#1e1e1e; padding-top:230px; text-align:center; margin-bottom:28px;}
+.login_input{ margin-bottom:19px; padding-left:60px; height:54px;}
+.login_input input{ width:269px; height:54px; line-height:54px; color:#1e1e1e; padding:0 23px; font-size:18px;}
+.login_btn_box{ text-align:center;}
+.login_btn{ width:375px; height:55px; background:url(../images/login_btn.png) no-repeat; font-size:18px; color:#fff;}
+
+/*任务管理-医生列表*/
+.page_top{ height:175px; background:url(../images/top_bg.jpg) no-repeat; background-size:cover;}
+.top_title{ height:118px; line-height:118px; font-family:"宋体"; padding:0 1%; color:#fff; font-size:16px; overflow:hidden;}
+.top_title h4{ font:32px/118px "Microsoft YaHei","微软雅黑"; margin-right:72px;}
+.top_title a{ display:inline-block; height:30px; line-height:30px; padding-left:44px; background:url(../images/icon_logout.png) no-repeat left center; margin:0 72px 0 25px; color:#fff;}
+.top_nav{ padding-left:14.8%;}
+.top_nav ul li{ float:left; width:12%; min-width:140px; overflow:hidden; white-space:nowrap; height:57px; line-height:57px; text-align:center;}
+.top_nav ul li a{ display:block; font-size:20px; color:#fff;}
+.top_nav ul li a.cur{ background:url(../images/cur_bg.jpg) repeat-x; color:#1366c2;}
+.page_cont{ margin:1%;}
+.cont_body{ position:relative; padding-left:15%; background-color:#f2f2f1;}
+.l_menu{ position:absolute; left:0; top:0; width:14%; min-width:190px; background-color:#fff; padding:1px 0 0 1px; box-sizing:border-box;}
+.l_menu ul{ background-color:#e4e4e4;}
+.l_menu ul li a{ display:block; height:54px; line-height:54px; font-size:18px; padding-left:30%;}
+.l_menu ul li a.cur{ background-color:#2fade1; color:#fff;}
+.r_box{ width:100%; min-height:272px; padding:16px 25px 73px 0px; box-sizing:border-box; overflow-x:auto;}
+.top_site{ height:58px; background-color:#fff; border:1px solid #8d8d8d; border-radius:8px; font-size:16px; margin-bottom:16px;}
+.here{ float:left; line-height:58px; color:#000; padding-left:2%;}
+.search_box{ float:right; width:65%; padding:12px 0 12px 2%;}
+.search_box label{ position:absolute; left:0; line-height:34px;}
+.search_box input,.search_box select{ border-radius:8px; background-color:#f2f2f2; border:1px solid #e5e5e5; color:#333; box-sizing:border-box;}
+.search_input{ position:relative; float:left; width:23%; margin-right:2%; padding-left:85px; box-sizing:border-box;}
+.search_select{ position:relative; float:left; width:17%; margin-right:2%; padding-left:53px; box-sizing:border-box;}
+.search_btn{ position:relative; float:left; width:55%;}
+.search_box .txt{ width:100%; height:32px; line-height:32px; padding:0 6%;}
+.search_box select{ width:100%; height:34px; padding:4px 6% 5px;}
+.search_box .btn{ float:left; width:19%; height:34px; background-color:#0086d7; color:#fff; margin-right:1%; border:none;}
+.wid_40{ width:40%;}
+.wid_40 .search_input,.wid_46 .search_input{ width:66%;}
+.wid_40 .search_btn,.wid_46 .search_btn{ width:31%; margin-right:1%;}
+.wid_40 .search_btn .btn,.wid_46 .search_btn .btn{ width:47%; margin-right:3%;}
+.cont_box{ width:100%; border-radius:8px; border:1px solid #8f8f8f; box-sizing:border-box;}
+.cont_box table{ width:100%; border-collapse:collapse; font-size:18px; table-layout:fixed;}
+.cont_box table tr th{ height:50px; color:#fff; font-weight:normal; background-color:#2fade1; border-right:1px solid #e5e5e5;}
+.cont_box table tr td{ height:50px; background-color:#fff; text-align:center; border:1px solid #e5e5e5; overflow:hidden; white-space:nowrap; text-overflow:ellipsis; padding:0 0.5%;}
+.cont_box table tr.even td{ background-color:#f2f2f2;}
+.cont_box table tr:first-child th:first-child{ border-top-left-radius:8px;}
+.cont_box table tr:first-child th:last-child{ border-top-right-radius:8px;}
+.cont_box table tr:last-child td:first-child{ border-bottom-left-radius:8px;}
+.cont_box table tr:last-child td:last-child{ border-bottom-right-radius:8px;}
+.cont_box table tr td:first-child{ border-left:0;}
+.cont_box table tr:last-child td{ border-bottom:0;}
+.cont_box table tr th:last-child,.cont_box table tr td:last-child{ border-right:0;}
+.cont_box table tr td input[type="checkbox"]{ width:22px; height:22px; background-color:#f2f2f2; border:1px solid #999;}
+.call_btn{ width:21px; height:22px; background:url(../images/call.png) no-repeat;}
+
+/*任务管理*/
+.pl_0 .r_box{ padding-left:25px; padding-right:25px;}
+.pl_0 .r_wrapper{ min-width:auto;}
+.cont_box a{ color:#0030ff; text-decoration:underline;}
+.flip{ height:30px; font-size:18px; padding:20px 0;}
+.flip .left span{ color:#2fade1; margin-left:12px;}
+.flip ul{ float:left; margin-right:20px;}
+.flip ul li{ float:left;}
+.flip ul li a{ display:block; padding:0 10px; height:28px; line-height:28px; background-color:#e4e4e4; border:1px solid #d6d3d3; text-align:center; margin:0 9px;}
+.flip ul li a.cur{ background-color:#2fade1; color:#fff;}
+.flip input{ width:32px; height:22px; background-color:#f2f2f1; color:#333; border:1px solid #b8b8b8; padding:0 5px; text-align:center; margin:0 12px;}
+
+/*任务管理-医生列表-拨打弹窗*/
+.page_pop{ position:absolute; top:50%; left:50%; background-color:#fff; border:1px solid #999; box-shadow:10px 12px 15px #999; box-sizing:border-box;}
+.call_number{ margin-left:-31%; width:62%; min-width:882px; padding:0 4%;}
+.pop_tit{ font-size:18px; color:#032f64; text-align:center; padding:34px 0 15px; border-bottom:1px dashed #ccc;}
+.pop_cont table{ width:100%; font-size:15px; color:#666; table-layout:fixed;}
+.pop_cont tr th{ height:52px; color:#333; font-weight:normal; border-bottom:1px dashed #ccc;}
+.pop_cont tr td{ text-align:center; height:30px; padding:0 1%; overflow:hidden; white-space:nowrap; text-overflow:ellipsis;}
+.pop_cont tr.pt_1 td{ padding-top:1%;}
+.pop_cont tr.pb_1 td{ padding-bottom:1%;}
+.bor_btm td{ border-bottom:1px dashed #ccc;}
+.btn_box{ height:34px; text-align:center; padding:25px 0; border-top:1px dashed #ccc;}
+.btn_box .btn{ width:100px; height:34px; font-size:16px; border-radius:5px; margin:0 18px;}
+.btn_close{ background-color:#ccc;}
+
+/*任务管理-医生列表-导入医生*/
+.import_doctor,.import_hint,.user_set{ width:462px; padding:0 50px; margin-left:-241px;}
+.import_doctor .pop_cont,.user_set .pop_cont{ padding:23px 0;}
+.import_doctor label,.user_set label{ float:left; font-size:15px; line-height:30px;}
+.import_doctor .txt,.user_set .txt{ float:left; width:194px; height:28px; line-height:28px; border:1px solid #999; padding:0 10px; color:#333; margin-right:5px;}
+.btn_import{ background-color:#00cc00; color:#fff;}
+.import_line{ position:relative;}
+.select_btn{ width:64px; height:30px; font-size:15px; color:#fff; background-color:#0086d7;}
+.select_file{ width:64px; height:30px; position:absolute; right:0; top:0; opacity:0;}
+.import_hint{ z-index:2;}
+.hint_info{ margin:23px 0; max-height:300px; overflow-y:auto; font-size:14px;}
+
+/*任务管理-医生列表-高级检索*/
+.advanced_search,.member_set{ width:56%; min-width:565px; padding:0 4%; margin-left:-28%;}
+.search_form{ padding-top:20px;}
+.input_line{ margin-bottom:20px; font-size:15px;}
+.input_one{ position:relative; width:49%; padding-left:112px; box-sizing:border-box; font-size:15px;}
+.input_one label,.info_one label,.target_one label,.email_one label{ position:absolute; top:0; left:0; width:105px; text-align:right; line-height:30px;}
+.input_one .txt,.input_one select,.info_one .txt,.info_one select,.target_one ul li .txt,.set_line select{ width:100%; height:30px; line-height:30px; border:1px solid #999; color:#666;}
+.input_one .txt,.info_one .txt,.target_one ul li .txt{ width:100%; padding:0 2%; box-sizing:border-box;}
+.input_one select,.info_one select{ float:left; width:28%;}
+.input_one select:nth-child(3),.info_one select:nth-child(3){ width:40%;}
+.mr_2{ margin-right:2%;}
+.input_one ul li,.info_one ul li,.target_one ul li,.set_line ul li{ float:left; height:30px; line-height:30px; color:#666; margin-right:11%;}
+input[type="checkbox"],input[type="radio"]{ width:19px; height:19px; margin-right:5px; vertical-align:-4px;}
+.wid_100 ul li{ margin-right:4%;}
+.input_one .two_text{ position:relative;}
+.input_one .two_text .txt{ width:47%;}
+.input_one .two_text span{ position:absolute; left:50%; margin-left:-7px; display:block; width:14px; line-height:30px;}
+
+/*任务管理-医生列表-医生详细信息*/
+.back_btn{ width:100px; margin-right:1%;}
+.back_btn .btn{ width:100%;}
+.info_box{ background-color:#fff; border-radius:8px; border:1px solid #878787; font-size:18px; margin-bottom:12px;}
+.info_tit{ height:50px; line-height:50px; background-color:#f2f2f2; padding-left:2%; border-top-left-radius:8px; border-top-right-radius:8px; border-bottom:1px solid #e5e5e5;}
+.info_tit p{ float:left;}
+.info_box a{ text-decoration:underline;}
+.r_btn{ float:right; width:453px; margin-right:0.6%;}
+.r_btn .btn{ width:100px; height:34px; line-height:34px; color:#fff; font-size:16px; background-color:#0086d7; margin-right:1%; border-radius:8px;}
+.r_btn .wid_164{ width:164px;}
+.info_line{ padding:0 8%; border-bottom:1px solid #e5e5e5; font-size:18px;}
+.info_line:last-child,.doctor_set:last-child{ border-bottom:0;}
+.info_one{ position:relative; width:30%; padding:10px 0 10px 130px;}
+.info_one label{ width:130px; top:10px;}
+.info_one:first-child{ padding-right:120px; border-right:1px solid #e5e5e5;}
+.email_btn{ width:26px; height:18px; background:url(../images/email.jpg) no-repeat;}
+.info_one .call_btn{ position:absolute; top:14px; right:18px;}
+.info_one .email_btn{ position:absolute; top:16px; right:62px;}
+.info_one span{ display:block; min-width:176px; overflow:hidden; white-space:nowrap; text-overflow:ellipsis; font-size:16px; color:#666; line-height:30px;}
+.target_line{ padding:10px 0 10px 11%; border-bottom:1px solid #e5e5e5;}
+.target_one{ position:relative; padding-left:130px;}
+.target_one label{ width:130px;}
+.target_one ul li{ position:relative; width:16%; padding-left:84px; margin:0 2% 10px 0;}
+.target_one ul li p{ position:absolute; left:0;}
+.email_one{ position:relative; padding:10px 0 10px 130px;}
+.email_one label{ width:130px; line-height:108px; top:10px;}
+.email_one textarea{ width:100%; height:108px; border:1px solid #999; color:#666; padding:10px; box-sizing:border-box;}
+.call_log table{ width:100%; border-collapse:collapse; table-layout:fixed; padding:0 0.5%;}
+.call_log .tb_one{ padding:0;}
+.call_log tr th{ background-color:#c8c7c7; font-weight:normal;}
+.call_log tr th,.call_log tr td{ height:50px; font-size:18px; border:1px solid #e5e5e5; text-align:center; padding:0 1%;}
+.call_log tr td{ overflow:hidden; white-space:nowrap; text-overflow:ellipsis;}
+.call_log tr th:first-child,.call_log tr td:first-child{ border-left:0}
+.call_log tr th:last-child,.call_log tr td:last-child{ border-right:0;}
+.call_log tr:last-child td{ border-bottom:0;}
+.record_btn{ width:26px; height:20px; background:url(../images/record.jpg) no-repeat;}
+/*.select_input{ width:100%; position:relative;}
+.select_input select,.select_input .txt{ position:absolute; left:0; top:0;}
+.select_input .txt{ width:90%; z-index:2; border-right:0; background-color:#fff;}*/
+.input_wrapper{ position:relative;}
+.input_div{ position:absolute; z-index:2; width:100%; background-color:#fff; border:1px solid #999; color:#666; box-sizing:border-box;}
+.input_div span{ display:block; padding:0 2%; height:26px; line-height:26px;}
+.input_div span:hover,.input_div .active{ background-color:#1e90ff; color:#fff;}
+.info_one .input_div span{ font-size:18px;}
+
+/*任务管理-医生列表-短信模板*/
+.input_list{ height:400px; overflow-y:auto;}
+.list_line{ position:relative; font-size:15px; color:#666; padding:10px 0 10px 24px; border-bottom:1px dashed #ccc;}
+.list_line:last-child{ border-bottom:0;}
+.list_line input[type="radio"],.list_line input[type="checkbox"]{ position:absolute; left:0; top:16px;}
+.list_line .txt{ height:26px; line-height:26px; border:1px solid #999; margin-right:4px; padding:0 8px; color:#666;}
+
+/*任务管理-预约呼叫*/
+.wid_46{ width:46%;}
+
+/*任务管理-呼叫记录*/
+.wid_48{ width:48%;}
+.wid_48 .search_input{ width:52%;}
+.wid_48 .search_btn{ width:45%;}
+.wid_48 .search_btn .btn{ width:31%; margin-right:2%;}
+
+/*后台管理-用户管理*/
+.add_btn{ width:100px; margin-right:0.8%;}
+.add_btn .btn{ width:100px;}
+
+/*后台管理-用户管理-添加用户*/
+.set_line{ position:relative; padding-left:114px; margin-bottom:20px; font-size:15px;}
+.set_line:last-child{ margin-bottom:0;}
+.set_line label{ position:absolute; left:0; width:114px; text-align:right; float:none;}
+.set_line .txt{ width:100%; float:none; margin-right:0; box-sizing:border-box; font-size:15px;}
+.pop_cont .bor_btm{ padding-bottom:20px; margin-bottom:20px; border-bottom:1px dashed #ccc;}
+
+/*任务管理-任务设置*/
+.one_btn{ width:100px; margin:8px 1% 0 0;}
+.two_btn{ width:213px;}
+.two_btn .btn_green{ background-color:#00cc00;}
+.doctor_set{ padding:0 4% 0 11%; border-bottom:1px solid #e5e5e5;}
+.set_body{ position:relative; padding-left:540px;}
+.set_left{ position:absolute; left:0; top:50%; margin-top:-17px;}
+.set_left label{ float:left; width:130px; line-height:34px; text-align:right;}
+.set_left .btn,.btn_select{ position:absolute; left:130px; width:100px; height:34px; font-size:16px; background-color:#dcdcdc; color:#333; border-radius:6px;}
+.set_left input[type="file"]{ opacity:0; z-index:1;}
+.set_left span{ float:right; width:95px; margin:0 15px 0 115px; line-height:34px; font-size:16px; overflow:hidden; white-space:nowrap; text-overflow:ellipsis; text-align:center;}
+.set_right{ width:100%; min-height:56px; border-left:1px solid #e5e5e5; padding:13px 0 13px 25px; font-size:16px; line-height:30px; box-sizing:border-box;}
+.set_right a{ color:#0030ff;}
+.set_right ul li{ float:left; margin-right:6%;}
+.set_right ul li input{ font-size:20px; color:#ff0000; margin-left:14px;}
+.btn_select{ left:inherit; top:8px; right:0px;}
+.set_left .upload_btn{ left:355px;}
+.set_left .txt{ width:323px; height:34px; line-height:34px; border:1px solid #999; padding:0 2%; box-sizing:border-box;}
+
+/*任务管理-任务设置-选择职称*/
+.member_list{ padding:20px 0 12px;line-height:36px;}
+.member_one{ position:relative; padding-left:130px; font-size:15px; color:#666;}
+.l_list{ position:absolute; left:0; width:130px;}
+.r_list{ width:100%;}
+.r_list ul li{ float:left; width:18%; min-width:134px; margin-left:2%; }
+
+
+@media screen and (max-width:1100px){
+	.top_title a{ margin-right:20px;}
+}
+@media screen and (max-width:1440px){
+	.top_nav{ padding-left:201px;}	
+	.cont_body{ padding-left:210px;} 
+	.call_number{ margin-left:-441px;}
+	.input_one .two_text .txt{ width:44%;}
+	.wid_40{ width:60%;}
+	.wid_46,.wid_48{ width:65%;}
+	.set_body{ padding-left:468px;}
+	.advanced_search{ width:58%; padding:0 3%;}
+}
+@media screen and (max-width:1250px){
+	.info_line,.doctor_set{ padding:0 1.1%;}
+
+}
+@media screen and (max-width:1024px){ 
+	.advanced_search,.member_set{ margin-left:-282.5px;}
+}
+@media screen and (max-width:1280px){ 
+	.info_line{ padding:0 1%;}
+	.advanced_search{ width:60%; padding:0 1%;}
+}

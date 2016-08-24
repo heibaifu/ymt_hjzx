@@ -1,0 +1,355 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+<title>任务管理-任务设置-添加成员</title>
+<link href="res/css/css.css" type="text/css" rel="stylesheet" />
+<script src="res/js/index.js"></script>
+</head>
+
+<body onload="init()" onresize="init()">
+	<div class="page_top">
+    	<div class="top_title">
+        	<div class="left clearfix">
+            	<h4 class="left">医脉通呼叫中心管理系统</h4>
+                <p class="right">今天是2014年6月11日  星期三  16:10</p>
+            </div>
+            <div class="right">
+            	张尔洛，欢迎您！<a href="">退出</a>
+            </div>
+        </div>
+        <div class="top_nav">
+        	<ul class="clearfix">
+            	<li>
+                	<a href="" class="cur">任务管理</a>
+                </li>
+                <li>
+                	<a href="">呼叫记录</a>
+                </li>
+                <li>
+                	<a href="">医生管理</a>
+                </li>
+                <li>
+                	<a href="">后台管理</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+   	<div class="page_cont">
+    	<div class="cont_body">
+            <div class="l_menu">
+                <ul>
+                    <li>
+                        <a href="">医生列表</a>
+                    </li>
+                    <li>
+                        <a href="">预约呼叫(<span class="red">20</span>)</a>
+                    </li>
+                    <li>
+                        <a href="">呼叫记录</a>
+                    </li>
+                    <li>
+                        <a href="">呼叫统计</a>
+                    </li>
+                    <li>
+                        <a href="" class="cur">任务设置</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="r_box" id="bg">
+            	<div class="r_wrapper">
+                    <div class="top_site clearfix">
+                        <div class="here">
+                            您的位置：<a href="">任务管理</a>>任务设置
+                        </div>
+                        <div class="search_box clearfix back_btn">
+                            <div class="">
+                                <input type="button" class="btn" value="返回" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="info_box">
+                        <div class="info_tit">
+                            <p>医生基本信息</p>
+                        </div>
+                        <div class="info_body">
+                            <div class="info_line clearfix">
+                                <div class="info_one left">
+                                    <label>任务名称：</label>
+                                    <input type="text" class="txt" />
+                                </div>
+                                <div class="info_one right">
+                                    <label>任务编号：</label>
+                                    <input type="text" class="txt" />
+                                </div>
+                            </div>
+                            <div class="info_line clearfix">
+                                <div class="info_one left">
+                                    <label>任务类型：</label>
+                                    <select class="wid_100">
+                                        <option>=请选择=</option>
+                                    </select>
+                                </div>
+                                <div class="info_one right">
+                                    <label>创建时间：</label>
+                                    <span>2016-03-14</span>
+                                </div>
+                            </div>
+                            <div class="info_line clearfix">
+                                <div class="info_one left">
+                                    <label>创建人：</label>
+                                    <span>张尔洛</span>
+                                </div>
+                                <div class="info_one right">
+                                    <label>负责人：</label>
+                                    <span>冯丹琴</span>
+                                    <input type="button" class="btn btn_select" value="选择" />
+                                </div>
+                            </div>
+                            <div class="info_line clearfix">
+                                <div class="info_one left">
+                                    <label>负责人电话：</label>
+                                    <span>18818881888</span>
+                                </div>
+                                <div class="info_one right">
+                                    <label>负责人邮箱：</label>
+                                    <span>fengdanqin@medlive.cn</span>
+                                </div>
+                            </div>
+                            <div class="info_line clearfix">
+                                <div class="info_one left">
+                                    <label>任务目标数：</label>
+                                    <span>300</span>
+                                </div>
+                                <div class="info_one right">
+                                    <label>完成进度：</label>
+                                    <span>66.67%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="info_box">
+                        <div class="info_tit">
+                            <p class="left">医生设置</p>
+                            <div class="r_btn one_btn">
+                                <input type="button" class="btn" value="保存" />
+                            </div>
+                        </div>
+                        <div class="info_body">
+                            <div class="doctor_set">
+                            	<div class="set_body">
+                                    <div class="set_left">
+                                        <label>导入城市列表：</label>
+                                        <input type="file" class="btn" value="未选择文件" onchange="document.getElementById('path1').innerHTML=document.getElementById('path1').title=this.value;" />					
+                                        <span id="path1">未选择文件</span>
+                                        <input type="button" class="btn" value="选择文件" />
+                                        <input type="button" class="btn upload_btn" value="上传" />
+                                    </div>
+                                    <div class="set_right">
+                                        <p>1、导入列表应为固定CSV格式，仅包含目标城市ID。<a href="">下载导入模板</a></p>
+                                        <p>2、如果追加或删除部分城市列表，请重新上传文件，将刷新原有导入列表。</p>
+                                        <p>3、如果是直辖市，请直接录入省份ID，其他请录入城市ID。</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="doctor_set">
+                            	<div class="set_body">
+                                    <div class="set_left">
+                                        <label>导入医院列表：</label>
+                                        <input type="file" class="btn" value="未选择文件" onchange="document.getElementById('path1').innerHTML=document.getElementById('path1').title=this.value;" />					
+                                        <span id="path1">未选择文件</span>
+                                        <input type="button" class="btn" value="选择文件" />
+                                        <input type="button" class="btn upload_btn" value="上传" />
+                                    </div>
+                                    <div class="set_right">
+                                        <p>1、导入列表应为固定CSV格式，仅包含目标城市ID。<a href="">下载导入模板</a></p>
+                                        <p>2、如果追加或删除部分城市列表，请重新上传文件，将刷新原有导入列表。</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="doctor_set">
+                            	<div class="set_body">
+                                    <div class="set_left">
+                                        <label>选择科室：</label>
+                                        <!--<input type="button" class="btn" value="选择科室" />-->
+                                        <input type="text" class="txt" />
+                                    </div>
+                                    <!--<div class="set_right">
+                                        <ul class="clearfix">
+                                        	<li>
+                                            	医学相关<input type="button" class="btn" value="×" />
+                                            </li>
+                                            <li>
+                                            	公共卫生与预防医学<input type="button" class="btn" value="×" />
+                                            </li>
+                                            <li>
+                                            	基础医学<input type="button" class="btn" value="×" />
+                                            </li>
+                                            <li>
+                                            	中医和中西医结合科<input type="button" class="btn" value="×" />
+                                            </li>
+                                            <li>
+                                            	临床医学<input type="button" class="btn" value="×" />
+                                            </li>
+                                            <li>
+                                            	临床医学<input type="button" class="btn" value="×" />
+                                            </li>
+                                        </ul>
+                                    </div>-->
+                                    <div class="set_right">
+                                        <p>1、导入列表应为固定CSV格式，仅包含目标城市ID。<a href="">下载导入模板</a></p>
+                                        <p>2、如果追加或删除部分城市列表，请重新上传文件，将刷新原有导入列表。</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="doctor_set">
+                            	<div class="set_body">
+                                    <div class="set_left">
+                                        <label>选择职称：</label>
+                                        <input type="button" class="btn" value="选择职称" />
+                                    </div>
+                                    <div class="set_right">
+                                        <ul class="clearfix">
+                                        	<li>
+                                            	医学相关<input type="button" class="btn" value="×" />
+                                            </li>
+                                            <li>
+                                            	公共卫生与预防医学<input type="button" class="btn" value="×" />
+                                            </li>
+                                            <li>
+                                            	基础医学<input type="button" class="btn" value="×" />
+                                            </li>
+                                            <li>
+                                            	中医和中西医结合科<input type="button" class="btn" value="×" />
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="info_box">
+                        <div class="info_tit">
+                            <p class="left">目标达成选项</p>
+                            <div class="r_btn two_btn">
+                                <input type="button" class="btn btn_green" value="目标设置" />
+                                <input type="button" class="btn" value="新建选项" />
+                            </div>
+                        </div>
+                        <div class="info_body">
+                        	<div class="call_log">
+                                <table>
+                                    <tbody>
+                                        <tr>
+                                            <th width="32%">选项名称</th>
+                                            <th width="30%">必须完成选项</th>
+                                            <th width="9%">创建时间</th>
+                                            <th width="8%">创建人</th>
+                                            <th width="7%">编辑</th>
+                                            <th width="7%">注销</th>
+                                            <th width="7%">删除</th>
+                                        </tr>
+                                        <tr>
+                                            <td>选项名称一</td>
+                                            <td>是</td>
+                                            <td>2016-03-16</td>
+                                            <td>张尔洛</td>
+                                            <td><a href="" class="blue">编辑</a></td>
+                                            <td><a href="" class="blue">注销</a></td>
+                                            <td><a href="" class="red">删除</a></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="info_box">
+                        <div class="info_tit">
+                            <p class="left">目标达成选项</p>
+                            <div class="r_btn one_btn">
+                                <input type="button" class="btn" value="添加成员" />
+                            </div>
+                        </div>
+                        <div class="info_body">
+                        	<div class="call_log">
+                                <table>
+                                    <tbody>
+                                        <tr>
+                                            <th width="11%">城市</th>
+                                            <th width="11%">坐席号</th>
+                                            <th width="11%">坐席号</th>
+                                            <th width="29%">任务权限</th>
+                                            <th width="9%">创建时间</th>
+                                            <th width="8%">创建人</th>
+                                            <th width="7%">编辑</th>
+                                            <th width="7%">注销</th>
+                                            <th width="7%">删除</th>
+                                        </tr>
+                                        <tr>
+                                            <td>北京市</td>
+                                            <td>01001</td>
+                                            <td>张尔洛</td>
+                                            <td>负责人</td>
+                                            <td>2016-03-16</td>
+                                            <td>张尔洛</td>
+                                            <td><a href="" class="blue">编辑</a></td>
+                                            <td><a href="" class="blue">注销</a></td>
+                                            <td><a href="" class="red">删除</a></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="page_pop user_set">
+    	<div class="pop_tit">成员设置</div>
+        <div class="pop_cont">
+            <div class="set_line">
+                <label>城市：</label>
+                <select>
+                    <option>=请选择=</option>
+                </select>
+            </div>
+            <div class="set_line">
+                <label>成员姓名：</label>
+                <select>
+                    <option>=请选择=</option>
+                </select>
+            </div>
+            <div class="set_line">
+                <label>医生信息权限：</label>
+                <select>
+                    <option>=请选择=</option>
+                </select>
+            </div>
+            <div class="set_line">
+                <label>预约呼叫权限：</label>
+                <select>
+                    <option>=请选择=</option>
+                </select>
+            </div>
+            <div class="set_line">
+                <label>呼叫记录权限：</label>
+                <select>
+                    <option>=请选择=</option>
+                </select>
+            </div>
+            <div class="set_line">
+                <label>呼叫统计权限：</label>
+                <select>
+                    <option>=请选择=</option>
+                </select>
+            </div>
+        </div>
+        <div class="btn_box">
+        	<input type="button" class="btn btn_import" value="确定" />
+        	<input type="button" class="btn btn_close" value="取消" />
+        </div>
+    </div>
+</body>
+</html>

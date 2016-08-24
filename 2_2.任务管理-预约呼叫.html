@@ -1,0 +1,221 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+<title>任务管理-预约呼叫</title>
+<link href="res/css/css.css" type="text/css" rel="stylesheet" />
+<script src="res/js/index.js"></script>
+</head>
+
+<body onload="init()" onresize="init()">
+	<div class="page_top">
+    	<div class="top_title">
+        	<div class="left clearfix">
+            	<h4 class="left">医脉通呼叫中心管理系统</h4>
+                <p class="right">今天是2014年6月11日  星期三  16:10</p>
+            </div>
+            <div class="right">
+            	张尔洛，欢迎您！<a href="">退出</a>
+            </div>
+        </div>
+        <div class="top_nav">
+        	<ul class="clearfix">
+            	<li>
+                	<a href="" class="cur">任务管理</a>
+                </li>
+                <li>
+                	<a href="">呼叫记录</a>
+                </li>
+                <li>
+                	<a href="">医生管理</a>
+                </li>
+                <li>
+                	<a href="">后台管理</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+   	<div class="page_cont">
+    	<div class="cont_body">
+            <div class="l_menu">
+                <ul>
+                    <li>
+                        <a href="">医生列表</a>
+                    </li>
+                    <li>
+                        <a href="" class="cur">预约呼叫(<span class="red">20</span>)</a>
+                    </li>
+                    <li>
+                        <a href="">呼叫记录</a>
+                    </li>
+                    <li>
+                        <a href="">呼叫统计</a>
+                    </li>
+                    <li>
+                        <a href="">任务设置</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="r_box" id="bg">
+            	<div class="r_wrapper">
+                    <div class="top_site clearfix">
+                        <div class="here">
+                            您的位置：<a href="">任务管理</a>>预约呼叫
+                        </div>
+                        <div class="search_box clearfix wid_46">
+                        	<div class="search_input">
+                                <label>简单检索：</label>
+                                <input type="text" class="txt" placeholder="请输入任务名称" />
+                            </div>
+                            <div class="search_btn">
+                                <input type="button" class="btn" value="简单检索" />
+                                <input type="button" class="btn" value="高级检索" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cont_box">
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <th width="5%"></th>
+                                    <th width="6%">姓名</th>
+                                    <th width="6%">省份</th>
+                                    <th width="6%">城市</th>
+                                    <th width="23%">医院</th>
+                                    <th width="9%">科室</th>
+                                    <th width="10%">职称</th>
+                                    <th width="8%">目标达成</th>
+                                    <th width="14%">预约时间</th>
+                                    <th width="7%">倒计时</th>
+                                    <th width="6%">拨打</th>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox" /></td>
+                                    <td><a href="">张尔洛</a></td>
+                                    <td>北京市</td>
+                                    <td>北京市</td>
+                                    <td title="北京大学附属第六医院">北京大学附属第六医院</td>
+                                    <td>精神内科</td>
+                                    <td>主任医师</td>
+                                    <td>否</td>
+                                    <td>2016-03-16 11:30</td>
+                                    <td>00:09</td>
+                                    <td><input type="button" class="btn call_btn" /></td>
+                                </tr>
+                                <tr class="even">
+                                    <td><input type="checkbox" /></td>
+                                    <td><a href="">张尔洛</a></td>
+                                    <td>北京市</td>
+                                    <td>北京市</td>
+                                    <td title="北京大学附属第六医院">北京大学附属第六医院</td>
+                                    <td>精神内科</td>
+                                    <td>主任医师</td>
+                                    <td>否</td>
+                                    <td>2016-03-16 11:30</td>
+                                    <td class="red">-00:10</td>
+                                    <td><input type="button" class="btn call_btn" /></td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox" /></td>
+                                    <td><a href="">张尔洛</a></td>
+                                    <td>北京市</td>
+                                    <td>北京市</td>
+                                    <td title="北京大学附属第六医院">北京大学附属第六医院</td>
+                                    <td>精神内科</td>
+                                    <td>主任医师</td>
+                                    <td>否</td>
+                                    <td>2016-03-16 11:30</td>
+                                    <td class="red">-00:10</td>
+                                    <td><input type="button" class="btn call_btn" /></td>
+                                </tr>
+                                <tr class="even">
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr class="even">
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="flip">
+                    	<div class="left">任务数量<span>111</span></div>
+                        <div class="right">
+                        	<ul class="clearfix">
+                            	<li>
+                                	<a href=""><</a>  
+                                </li>
+                               	<li>
+                                	<a href="">1</a>
+                                </li>
+                                <li>
+                                	<a href="">2</a>
+                                </li>
+                                <li>
+                                	<a href="" class="cur">3</a>
+                                </li>
+                                <li>
+                                	<a href="">4</a>
+                                </li>
+                                <li>
+                                	<a href="">5</a>
+                                </li>
+                                <li>
+                                	<a href="">></a>
+                                </li>
+                            </ul>
+                            共5页<input type="text" /><a href="">跳转</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
